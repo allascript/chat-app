@@ -7,7 +7,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 
 import firebase, {auth, provider} from './firebase.js';
-
+import Button from '@material-ui/core/Button';
 
 
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
@@ -37,12 +37,14 @@ class AppRouter extends React.Component {
   <nav className="main-nav">
     {!this.state.user &&
   <div>
-    <Link to="/login">Login</Link>
-    <Link to="/register">Register</Link>
+    <Button variany="contained">
+    <Link to="/login">Login</Link></Button>
+    <Button variany="contained">
+    <Link to="/register">Register</Link></Button>
     </div>
     }
-    {this.state.user &&
-    <a href="#!" onClick={this.logOutUser}>Logout</a>
+    {this.state.user &&<Button variany="contained">
+    <a href="#!" onClick={this.logOutUser}>Logout</a></Button>
   }
   </nav>
   <Switch>

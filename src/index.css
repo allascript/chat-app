@@ -35,3 +35,29 @@ a:hover {
   display: inline-block;
   padding: 25px 25px;
 }
+
+body{
+  background-color: #F8F8F8
+}
+
+.auth-container
+{
+  text-align: center;
+  margin: 20px;
+  display: grid;
+}
+
+.auth-container h1 {
+  color: #6B4070;
+}
+.auth-container form{
+  display: grid;
+  max-width: 400px;
+  text-align: center;
+  margin-left: 500px;
+}
+
+.auth-container .submit{
+  background-color:#E2959B;
+  
+}
