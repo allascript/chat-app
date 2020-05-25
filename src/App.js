@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Chatbox from './components/Chatbox';
-import {Link} from 'react-router-dom';git add -A
+import {Link} from 'react-router-dom';
 import firebase from './firebase';
 
 class App extends React.Component {
@@ -13,13 +13,13 @@ class App extends React.Component {
   }
 
   onChange = (event) => {
-    this.setState({[event.target.value]: event.target.value });
+    this.setState({[event.target.name]: event.target.value});
   }
 
   onSubmit = (event) => {
     event.preventDefault();
     if(this.state.message !== ''){
-      const chatRef = firebase.database().ref('general');
+      const chatRef = firebase.database().ref('general'); 
       const chat = {
         message: this.state.message,
         user: this.props.user.displayName,
